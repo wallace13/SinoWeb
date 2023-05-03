@@ -1,0 +1,2 @@
+# SinoWeb
+Este é um projeto que desenvolvi para simular o toque dos sinos de quartel em um ambiente virtual. Utilizei JavaScript para criar um relógio em tempo real que identifica os horários em que os sinos devem ser tocados e emite um som de sinos de igreja. Além disso, adicionei uma imagem de sino que aparece quando o som é tocado e some quando o próximo horário é alcançado. O projeto foi uma oportunidade para aprimorar minhas habilidades em JavaScript e HTML, e para explorar a criação de um ambiente sonoro e visualmente agradável.
