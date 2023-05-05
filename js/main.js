@@ -33,27 +33,26 @@
             }
             return numero;
         }
-        function removeHorario(){
+        function removeSinoParado(){
             setTimeout(function() {
-                $(".hora").fadeOut();
+                $("#sino").fadeOut();
             }, 500);
         }
-        function exibeSino(){
+        function tocaSino(){
             setTimeout(function() {
-                $(".sino").show();
+                $("#sinotoca").show();
             }, 1000);
         }
-        function removeSino(tempo){
+        function removeSinoTocando(tempo){
             setTimeout(function() {
-                $(".sino").fadeOut();
+                $("#sinotoca").fadeOut();
             }, tempo); 
         }
-        function exibeHora(tempo){
+        function paraSino(tempo){
             setTimeout(function() {
-                $(".hora").show(); 
+                $("#sino").show(); 
             }, tempo); 
         }
-
         function atualizarHora() {
             let agora = new Date();
             let hora = agora.getHours();
@@ -71,12 +70,12 @@
                 case "20:30:00":
                 case "00:30:00":
                 case "04:30:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     setTimeout(function() {
                         singelaSound();
-                        removeSino(1000);
-                        exibeHora(2000);
+                        removeSinoTocando(1000);
+                        paraSino(2000);
                     },550);
                 break;
                 case "09:00:00":
@@ -85,12 +84,12 @@
                 case "21:00:00":
                 case "01:00:00":
                 case "05:00:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     setTimeout(function() {
                         dobradaSound(); 
-                        removeSino(1000);
-                        exibeHora(2000);
+                        removeSinoTocando(1000);
+                        paraSino(2000);
                     },550);
                 break;
                 case "09:30:00":
@@ -99,8 +98,8 @@
                 case "21:30:00":
                 case "01:30:00":
                 case "05:30:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     for (let i = 0; i < 2; i++) {
                         setTimeout(function() {
                             if (i < 1) {
@@ -112,8 +111,8 @@
                         }, i * 2000); // aguarda 2 segundos antes de cada nova reprodução
                     } 
                     tempo = 2000 * 2;      
-                    removeSino(tempo);
-                    exibeHora(tempo + 1000);
+                    removeSinoTocando(tempo);
+                    paraSino(tempo + 1000);
                 break;
 
                 case "10:00:00":
@@ -122,16 +121,16 @@
                 case "22:00:00":
                 case "02:00:00":
                 case "06:00:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     for (let i = 0; i < 2; i++) {
                         setTimeout(function() {
                             dobradaSound();
                         }, i * 2000); // aguarda 2 segundos antes de cada nova reprodução
                     }
                     tempo = 2000 * 2;      
-                    removeSino(tempo);
-                    exibeHora(tempo + 1000);
+                    removeSinoTocando(tempo);
+                    paraSino(tempo + 1000);
                 break;
                 case "10:30:00":
                 case "14:30:00":
@@ -139,8 +138,8 @@
                 case "22:30:00":
                 case "02:30:00":
                 case "06:30:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     for (let i = 0; i < 3; i++) {
                         setTimeout(function() {
                             if (i < 2) {
@@ -151,8 +150,8 @@
                         }, i * 2000); // aguarda 2 segundos antes de cada nova reprodução
                     }
                     tempo = 2000 * 3;      
-                    removeSino(tempo);
-                    exibeHora(tempo + 1000);
+                    removeSinoTocando(tempo);
+                    paraSino(tempo + 1000);
                 break;
                 case "11:00:00":
                 case "15:00:00":
@@ -160,16 +159,16 @@
                 case "23:00:00":
                 case "03:00:00":
                 case "07:00:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     for (let i = 0; i < 3; i++) {
                         setTimeout(function() {
                             dobradaSound();
                         }, i * 2000); // aguarda 2 segundos antes de cada nova reprodução
                     }
                     tempo = 2000 * 3;      
-                    removeSino(tempo);
-                    exibeHora(tempo + 1000);
+                    removeSinoTocando(tempo);
+                    paraSino(tempo + 1000);
                 break;
                 case "11:30:00":
                 case "15:30:00":
@@ -177,8 +176,8 @@
                 case "23:30:00":
                 case "03:30:00":
                 case "07:30:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     for (let i = 0; i < 4; i++) {
                         setTimeout(function() {
                             if (i < 3) {
@@ -189,8 +188,8 @@
                         }, i * 2000); // aguarda 2 segundos antes de cada nova reprodução
                     }
                     tempo = 2000 * 4;      
-                    removeSino(tempo);
-                    exibeHora(tempo + 1000);
+                    removeSinoTocando(tempo);
+                    paraSino(tempo + 1000);
                 break;       
                 case "12:00:00":
                 case "16:00:00":
@@ -198,16 +197,16 @@
                 case "00:00:00":
                 case "04:00:00":
                 case "08:00:00":
-                    removeHorario();
-                    exibeSino();
+                    removeSinoParado();
+                    tocaSino();
                     for (let i = 0; i < 4; i++) {
                         setTimeout(function() {
                             dobradaSound();
                         }, i * 2000); // aguarda 2 segundos antes de cada nova reprodução
                     }
-                    tempo = 2000 * 4;      
-                    removeSino(tempo);
-                    exibeHora(tempo + 1000);
+                    tempo = 2000 * 4; 
+                    removeSinoTocando(tempo);   
+                    paraSino(tempo + 1000);  
                 break;
             }             
         }  

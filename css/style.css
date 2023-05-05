@@ -20,6 +20,10 @@ body{
     color: white;
     text-shadow: 0.01em 0.03em 0.1em blue;
 }
+.titulo{
+    font-size: 80px;
+    text-shadow: 0.01em 0.03em 0.1em yellow;
+}
 .hora {
     padding: 2px 25px;
     background-color: #1E211C;
@@ -28,6 +32,11 @@ body{
     border: 5px solid blue;
     font-family: "Qahiri", sans-serif;
 }
-.sino{
+.caixa img{
+    width:40%;
+    height: 50%;
+    padding-bottom: 20px;
+}
+#sinotoca{
     display: none;
 }
